@@ -43,3 +43,8 @@ For this deliverable you are wiring up Supabase email authentication. You have b
 | Authenticated users are redirected to the other page from the home page        | 1      |
 | Unauthenticated users are redirected back to the home page from the other page | 1      |
 
+Steps
+1. set up forms
+- event on submit
+- e.preventDefault
+- const data = new FormData(form)
