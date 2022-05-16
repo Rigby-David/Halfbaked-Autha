@@ -9,7 +9,7 @@ export function getUser() {
 }
 
 // signs an new user in and puts an auth token in local storage in the browser
-export async function sigUpUser(email, password) {
+export async function signUpUser(email, password) {
     const response = await client.auth.signUp({ email, password });
 
     return response.user;
