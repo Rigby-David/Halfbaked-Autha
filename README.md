@@ -43,3 +43,18 @@ For this deliverable you are wiring up Supabase email authentication. You have b
 | Authenticated users are redirected to the other page from the home page        | 1      |
 | Unauthenticated users are redirected back to the home page from the other page | 1      |
 
+Steps
+1. set up forms
+- event on submit
+- e.preventDefault
+- const data = new FormData(form)
+- if (user) { redirectIfLoggedIn(); }
+
+2. build signUpUser(); which signs a new user in and puts and auth token in local storage in the browser
+- const response sets an auth token using email and password
+- return response.user
+- import signUpUser to app.js
+- call signUpUser() in signUpForm event listener by making new variable and getting the data from email and password
+-
+
+3. build redirectIfLoggedIn(); which directs user from login page if they are already logged in when user tries to visit a page calling this function
