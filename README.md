@@ -48,3 +48,6 @@ Steps
 - event on submit
 - e.preventDefault
 - const data = new FormData(form)
+
+2. build signUpUser(); which signs 
+- 
