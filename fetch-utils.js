@@ -16,7 +16,11 @@ export async function signUpUser(email, password) {
 }
 
 // signs an existing user in and puts an auth token in local storage in the browser
-export async function signInUser(email, password) {}
+export async function signInUser(email, password) {
+    const response = await client.auth.signIn({ email, password });
+
+    return response.user;
+}
 
 // when a user tries to visit a page that calls this function, we automatically redirect the user back to the login page if they are not logged in
 // calls getUser
@@ -24,7 +28,11 @@ export async function checkAuth() {}
 
 // when a user tries to visit a page that calls this function, we automatically redirect the user away from the login page if they are already logged in
 // calls getUser
-export async function redirectIfLoggedIn() {}
+export async function redirectIfLoggedIn() {
+    if (getUser()) {
+        location.replace('./other-page');
+    }
+}
 
 // removes the token from local storage and redirects the user home
 export async function logout() {}
